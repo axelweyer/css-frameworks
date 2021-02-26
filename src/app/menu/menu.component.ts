@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemesEnum } from '../themes/shared/constants/themes.enum';
+import { ThemeModel } from '../themes/shared/models/theme.model';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public themes: Map<string, ThemeModel>;
+
+  constructor() {
+    this.themes = ThemesEnum;
+  }
 
   ngOnInit(): void {
   }

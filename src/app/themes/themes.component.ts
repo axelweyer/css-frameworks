@@ -1,9 +1,6 @@
-import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ThemeComponent } from './shared/constants/theme.component';
-import { ThemeDirective } from './shared/directives/theme.directive';
-import { TestComponent } from './list/test/test.component';
 import { ThemesEnum } from './shared/constants/themes.enum';
 
 @Component({
@@ -17,16 +14,12 @@ export class ThemesComponent implements OnInit, OnDestroy {
 
   public themeDirective: any;
 
-  constructor(private route: ActivatedRoute, private viewContainerRef: ViewContainerRef, private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const routeSub = this.route.params.subscribe((params: Params) => {
         const themeId = params.themeId;
-        console.log(params)
-        console.log(themeId)
-        console.log(ThemesEnum)
         this.themeDirective = ThemesEnum.get(themeId);
-        console.log(this.themeDirective);
     });
     this.subscription.add(routeSub);
   }

@@ -7,9 +7,11 @@
         </h2>
     </a>
     <hr>
-    <a routerLink="/themes/test" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <h2>
-            <li>Test</li>
-        </h2>
-    </a>
+    <ng-container *ngFor="let theme of themes | keyvalue">
+        <a routerLink="/themes/{{ theme.value.path }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <h2>
+                <li>{{ theme.value.label }}</li>
+            </h2>
+        </a>
+    </ng-container>
 </ul>

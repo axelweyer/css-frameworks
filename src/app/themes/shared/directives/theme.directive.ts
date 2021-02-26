@@ -12,7 +12,7 @@ export class ThemeDirective implements OnInit {
       private viewContainerRef: ViewContainerRef,
       private cdr: ChangeDetectorRef,
   ) {
-    console.log('themeDirective')
+    console.log('themeDirective', this.component)
   }
 
   ngOnInit(): void {
