@@ -1,11 +1,15 @@
 <i id="toggle-menu" class="icon ion-android-menu"></i>
 
 <ul>
-    <a routerLink="/themes/test" routerLinkActive="active">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <h2>
-            <li>
-                <i class="pe-7s-home"></i> Accueil
-            </li>
+            <li><i-bs name="house"></i-bs> Accueil</li>
+        </h2>
+    </a>
+    <hr>
+    <a routerLink="/themes/test" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <h2>
+            <li>Test</li>
         </h2>
     </a>
 </ul>

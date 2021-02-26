@@ -1,6 +1,39 @@
-@import url('//fonts.googleapis.com/css?family=Poppins:300italic,400italic,500italic,600italic,700italic,300,400,500,600,700');
 
-$black: #333;
+// COLORS
+$black: #111;
+$black-light: #333;
 $text: #727272;
 $grey: #ddd;
 $accent: rgb(17, 211, 196);
+
+
+
+// FONT-WEIGHT
+$font-super-light: 300;
+$font-light: 400;
+$font-normal: 500;
+$font-bold: 600;
+$font-super-bold: 700;
+
+
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin transition() {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }

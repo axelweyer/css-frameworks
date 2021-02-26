@@ -1,3 +1,18 @@
-* {
-    color: green;
+@import url("//fonts.googleapis.com/css?family=Poppins:300italic,400italic,500italic,600italic,700italic,300,400,500,600,700");
+
+html {
+    font-family: "Poppins", serif;
+    background: white;
+    color: $text;
+}
+
+a {
+    text-decoration: none;
+    
+    &:active,
+    &:focus {
+        outline: 0 !important;
+        border: none;
+        -moz-outline-style: none;
+    }
 }
