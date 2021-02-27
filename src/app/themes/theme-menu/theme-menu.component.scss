@@ -4,49 +4,46 @@ ul {
     list-style-type: none;
     color: $text;
     padding: 40px;
+    
+    li {
+        line-height: 60px;
+        cursor: pointer;
+        @include transition();
 
-    a {
-        &.active {
-            h2 {
-                li {
-                    color: white !important;
+        &:hover {
+            @include transition();
+
+            h3 {
+                color: $accent;
+            }
+        }
+        &.disabled {
+            cursor: default;
+
+            h3 {
+                color: $grey;
+            }
+        }
+        &.title {
+            h3 {
+                font-weight: $font-light;
+            }
+            &:not(.disabled) {
+                h3 {
+                    color: $black;
+                    font-weight: $font-light;
                 }
             }
         }
-        h2 {
+        h3 {
             margin: 0;
-    
-            li {
-                color: $text;
-                @include font-size(20px);
-                font-weight: $font-super-light;
-                line-height: 60px;
-                cursor: pointer;
-                @include transition();
-    
-                &:hover {
-                    color: $accent;
-                    @include transition();
-                }
-                i-bs {
-                    @include font-size(25px);
-                    margin-right: 15px;
-    
-                    @media (max-width: 768px) {
-                        display: none;
-                    }
-                    ::ng-deep svg {
-                        width: 25px;
-                        height: 25px;
-                        vertical-align: middle;
-                    }
-
-                }
-            }
+            color: $text;
+            @include font-size(20px);
+            font-weight: $font-super-light;
         }
-    }
-    hr {
-        border: none;
-        border-top: 1px solid $grey;
+        hr {
+            border: none;
+            border-top: 1px solid $grey;
+        }
     }
 }

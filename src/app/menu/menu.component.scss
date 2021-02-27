@@ -17,13 +17,13 @@ ul {
         }
         h2 {
             margin: 0;
+            color: $text;
+            @include font-size(20px);
+            font-weight: $font-super-light;
+            line-height: 60px;
+            cursor: pointer;
     
             li {
-                color: $text;
-                @include font-size(20px);
-                font-weight: $font-super-light;
-                line-height: 60px;
-                cursor: pointer;
                 @include transition();
     
                 &:hover {

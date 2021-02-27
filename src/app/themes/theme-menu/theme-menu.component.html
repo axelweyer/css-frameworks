@@ -1,25 +1,10 @@
 <ul>
-    <li>Download</li>
+    <li class="title"><h3>Download</h3></li>
     <li><hr></li>
-    <li>General</li>
-    <li>Colors</li>
-    <li>Font</li>
-    <li><hr></li>
-    <li>Texts</li>
-    <li>Titles</li>
-    <li>Paragraphs</li>
-    <li>Links</li>
-    <li><hr></li>
-    <li>Components</li>
-    <li>Buttons</li>
-    <li>Modals</li>
-    <li>Tooltips</li>
-    <li>Toasts</li>
-    <li>Cards</li>
-    <li>Loadings</li>
-    <li><hr></li>
-    <li>Forms</li>
-    <li>Inputs</li>
-    <li>Selects</li>
-    <li>Checkboxs</li>
+    <li *ngFor="let category of categories" [ngClass]="{
+        'disabled': !isCategoriesActivated(category.key, category.isCategory), 
+        'title': category.isTitle}">
+        <h3 *ngIf="category.isCategory; else separator">{{ category.label }}</h3>
+    </li>
+    <ng-template #separator><hr></ng-template>
 </ul>
