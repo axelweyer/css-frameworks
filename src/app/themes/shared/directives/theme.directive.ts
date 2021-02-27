@@ -1,11 +1,14 @@
-import { ChangeDetectorRef, ComponentFactoryResolver, Directive, Input, OnInit, Type, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, ComponentFactoryResolver, Directive, Input, OnDestroy, OnInit, Type, ViewContainerRef } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ThemeModel } from '../models/theme.model';
 import { ThemesService } from '../services/themes.service';
 
 @Directive({
     selector: '[themeHost]',
 })
-export class ThemeDirective implements OnInit {
+export class ThemeDirective implements OnInit, OnDestroy {
+
+    private subscriptions: Subscription = new Subscription();
 
     constructor(
         private componentFactoryResolver: ComponentFactoryResolver,
@@ -15,8 +18,7 @@ export class ThemeDirective implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        console.log('ThemeDirective')
-        this.themesService.themeActive.subscribe((theme: ThemeModel) => {
+        const themeActiveSub = this.themesService.themeActive.subscribe((theme: ThemeModel) => {
             if (theme != null) {
                 // init theme component
                 const componentFactory = this.componentFactoryResolver.resolveComponentFactory(theme.type);
@@ -27,6 +29,11 @@ export class ThemeDirective implements OnInit {
                 // apply changes
                 this.cdr.detectChanges();
             }
-        })
+        });
+        this.subscriptions.add(themeActiveSub);
+    }
+    
+    ngOnDestroy(): void {
+        this.subscriptions.unsubscribe();
     }
 }

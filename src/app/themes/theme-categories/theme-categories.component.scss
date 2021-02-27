@@ -4,6 +4,7 @@ ul {
     list-style-type: none;
     color: $text;
     padding: 40px;
+    margin: 0;
     
     li {
         line-height: 60px;
@@ -31,15 +32,23 @@ ul {
             &:not(.disabled) {
                 h3 {
                     color: $black;
-                    font-weight: $font-light;
+
+                    &:hover {
+                        color: $accent;
+                    }
                 }
             }
         }
         h3 {
             margin: 0;
             color: $text;
-            @include font-size(20px);
+            @include font-size(18px);
             font-weight: $font-super-light;
+            @include transition();
+
+            &:hover {
+                @include transition();
+            }
         }
         hr {
             border: none;

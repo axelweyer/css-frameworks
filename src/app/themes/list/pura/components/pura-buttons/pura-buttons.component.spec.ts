@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeMenuComponent } from './theme-menu.component';
+import { PuraButtonsComponent } from './pura-buttons.component';
 
-describe('ThemeMenuComponent', () => {
-  let component: ThemeMenuComponent;
-  let fixture: ComponentFixture<ThemeMenuComponent>;
+describe('PuraButtonsComponent', () => {
+  let component: PuraButtonsComponent;
+  let fixture: ComponentFixture<PuraButtonsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeMenuComponent ]
+      declarations: [ PuraButtonsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThemeMenuComponent);
+    fixture = TestBed.createComponent(PuraButtonsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

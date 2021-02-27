@@ -1,3 +1,3 @@
 export const PuraCategories: any = [
-    'GENERAL', 'COLORS'
+    'COMPONENTS', 'BUTTONS'
 ]
