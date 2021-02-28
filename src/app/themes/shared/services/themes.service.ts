@@ -8,22 +8,24 @@ import { ThemeModel } from '../models/theme.model';
 export class ThemesService {
 
     public themeActive: BehaviorSubject<ThemeModel> = new BehaviorSubject(null as any);
-    public categoriesList: Subject<string[]> = new Subject();
-    public categoryActive: Subject<string> = new Subject();
+    public categoriesList: BehaviorSubject<string[]> = new BehaviorSubject(null as any);
+    public categorySelected: BehaviorSubject<string> = new BehaviorSubject(null as any);
 
     constructor() { }
 
     public emitThemeActive(value: ThemeModel) {
+        console.log(value)
         this.themeActive.next(value);
         this.emitCategoriesList(value.categories);
-        this.emitCategoryActive('');
+        this.emitCategorySelected('');
     }
 
     public emitCategoriesList(value: string[]) {
         this.categoriesList.next(value);
     }
 
-    public emitCategoryActive(value: string) {
-        this.categoryActive.next(value);
+    public emitCategorySelected(value: string) {
+        console.log(value)
+        this.categorySelected.next(value);
     }
 }

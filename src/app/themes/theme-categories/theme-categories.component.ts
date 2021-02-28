@@ -21,10 +21,11 @@ export class ThemeCategoriesComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         const categoriesSub = this.themesService.categoriesList.subscribe((categoriesTheme: string[]) => {
+            console.log('categoriesTheme', categoriesTheme)
             this.categoriesTheme = categoriesTheme;
         });
         this.subscriptions.add(categoriesSub);
-        const categoryActiveSub = this.themesService.categoryActive.subscribe((categorie: string) => {
+        const categoryActiveSub = this.themesService.categorySelected.subscribe((categorie: string) => {
             this.categoryActive = categorie;
         });
         this.subscriptions.add(categoryActiveSub);
@@ -36,5 +37,9 @@ export class ThemeCategoriesComponent implements OnInit, OnDestroy {
 
     public isCategoriesActivated(category: string, isCategory: boolean): boolean {
         return isCategory && this.categoriesTheme.indexOf(category) > -1;
+    }
+
+    public selectCategory(categoryKey: string): void {
+        this.themesService.emitCategorySelected(categoryKey);
     }
 }

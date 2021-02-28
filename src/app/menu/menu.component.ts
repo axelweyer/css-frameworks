@@ -18,4 +18,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public selectTheme(theme: ThemeModel): void {
+      console.log(theme);
+  }
 }

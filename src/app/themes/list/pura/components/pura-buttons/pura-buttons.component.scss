@@ -1,0 +1,57 @@
+@import './../../pura.component.scss';
+
+.btn-pura {
+    padding: 15px 35px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    background: $white;
+    @include font-size(18px);
+    font-weight: $font-light;
+    @include transition();
+    margin: 10px 10px 10px 0;
+
+    &:hover {
+        background: $white-super-dark;
+        @include transition();
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &.btn-pura-primary {
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            background: $primary-dark;
+        }
+        &.btn-pura-accent {
+            background: $accent;
+
+            &:hover {
+                background: $accent-dark;
+            }
+        }
+    }
+    &.btn-pura-secondary {
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover {
+            border-color: $primary-dark;
+            background: $primary;
+            color: $white;
+        }
+        &.btn-pura-accent {
+            border-color: $accent;
+            color: $accent;
+
+            &:hover {
+                border-color: $accent-dark;
+                background: $accent;
+                color: $white;
+            }
+        }
+    }
+}

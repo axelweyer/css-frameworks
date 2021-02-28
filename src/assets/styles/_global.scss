@@ -1,9 +1,13 @@
+@import 'variables';
+
 @import url("//fonts.googleapis.com/css?family=Poppins:300italic,400italic,500italic,600italic,700italic,300,400,500,600,700");
 
 html {
     font-family: "Poppins", serif;
     background: white;
     color: $text;
+    @include font-size(14px);
+    font-weight: $font-light;
 }
 
 a {
@@ -14,5 +18,22 @@ a {
         outline: 0 !important;
         border: none;
         -moz-outline-style: none;
+    }
+}
+
+h4 {
+    @include font-size(24px);
+    font-weight: $font-light;
+}
+h5 {
+    @include font-size(18px);
+    font-weight: $font-normal;
+}
+
+#theme {
+    hr {
+        margin-top: 40px;
+        border: none;
+        border-bottom: 1px solid $grey;
     }
 }
