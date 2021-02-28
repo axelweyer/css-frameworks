@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { ThemesModule } from './themes/themes.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxBootstrapIconsModule.pick(allIcons)
+    NgxBootstrapIconsModule.pick(allIcons),
+    ThemesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

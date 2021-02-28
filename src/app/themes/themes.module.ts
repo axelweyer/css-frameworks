@@ -5,23 +5,21 @@ import { ThemeDirective } from './shared/directives/theme.directive';
 import { ThemesRoutingModule } from './themes-routing.module';
 import { PuraComponent } from './list/pura/pura.component';
 import { ThemeCategoriesComponent } from './theme-categories/theme-categories.component';
-import { PuraButtonsComponent } from './list/pura/components/pura-buttons/pura-buttons.component';
 
 @NgModule({
-  declarations: [
-    ThemesComponent,
-    ThemeDirective,
-    ThemeCategoriesComponent,
-    PuraComponent,
-    PuraButtonsComponent
-  ],
-  imports: [
-    CommonModule,
-    ThemesRoutingModule
-  ],
-  entryComponents: [
-    PuraComponent
-  ],
-  exports: [ThemeDirective]
+    declarations: [
+        ThemesComponent,
+        ThemeDirective,
+        ThemeCategoriesComponent,
+    ],
+    imports: [
+        CommonModule,
+        ThemesRoutingModule
+    ],
+    entryComponents: [
+        PuraComponent
+    ],
+    bootstrap: [ThemesComponent],
+    exports: [ThemeDirective,]
 })
 export class ThemesModule { }
