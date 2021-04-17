@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { ThemesModule } from './themes/themes.module';
+import { ICONS } from './shared/constants/icons.constants';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ThemesModule } from './themes/themes.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxBootstrapIconsModule.pick(allIcons),
+    NgxBootstrapIconsModule.pick(ICONS),
     ThemesModule
   ],
   providers: [],
