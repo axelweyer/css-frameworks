@@ -9,7 +9,6 @@
     @include font-size(18px);
     font-weight: $font-light;
     @include transition();
-    margin: 10px 10px 10px 0;
 
     &:hover {
         background: $white-super-dark;

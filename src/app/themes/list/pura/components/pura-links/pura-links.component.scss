@@ -1,0 +1,36 @@
+@import './../../pura.component.scss';
+
+.a-pura {
+    cursor: pointer;
+    @include font-size(18px);
+    font-weight: $font-normal;
+    @include transition();
+    border-bottom: 2px solid $grey;
+    color: $grey;
+
+    &:hover {
+        color: $text;
+        border-color: $text;
+        @include transition();
+    }
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &.a-pura-primary {
+        color: $primary;
+
+        &:hover {
+            color: $primary-dark;
+        }
+        &.a-pura-accent {
+            color: $accent;
+            border-color: $accent;
+
+            &:hover {
+                color: $accent-dark;
+                border-color: $accent-dark;
+            }
+        }
+    }
+}
