@@ -1,0 +1,31 @@
+@import './../../pura.component.scss';
+
+h1 {
+    @include font-size(27px);
+    color: $primary;
+    font-weight: $font-light;
+}
+h2 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-bold;
+}
+h3 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-normal;
+}
+h4 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-light;
+}
+h5 {
+    @include font-size(18px);
+    font-weight: $font-bold;
+}
+h6 {
+    @include font-size(16px);
+    color: $primary;
+    font-weight: $font-bold;
+}

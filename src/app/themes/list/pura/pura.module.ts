@@ -5,6 +5,7 @@ import { PuraButtonsComponent } from './components/pura-buttons/pura-buttons.com
 import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
 import { PuraLinksComponent } from './components/pura-links/pura-links.component';
+import { PuraTitlesComponent } from './components/pura-titles/pura-titles.component';
 
 export const themeRoutes = [
     {
@@ -18,7 +19,8 @@ export const themeRoutes = [
   declarations: [
     PuraComponent,
     PuraButtonsComponent,
-    PuraLinksComponent
+    PuraLinksComponent,
+    PuraTitlesComponent
 ],
   imports: [
     CommonModule,
