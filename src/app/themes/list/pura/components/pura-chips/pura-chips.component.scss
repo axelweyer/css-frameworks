@@ -1,12 +1,12 @@
 @import './../../pura.component.scss';
 
-.btn-pura {
-    padding: 15px 35px;
+.chips-pura {
+    padding: 5px 15px;
     border-radius: 1000px;
     border: none;
     cursor: pointer;
-    background: $white;
-    @include font-size(18px);
+    background: $white-dark;
+    @include font-size(16px);
     font-weight: $font-light;
     @include transition();
 
@@ -18,14 +18,14 @@
         opacity: 0.5;
         cursor: not-allowed;
     }
-    &.btn-pura-primary {
+    &.chips-pura-primary {
         background: $primary;
         color: $white;
 
         &:hover {
             background: $primary-dark;
         }
-        &.btn-pura-accent {
+        &.chips-pura-accent {
             background: $accent;
 
             &:hover {
@@ -33,7 +33,7 @@
             }
         }
     }
-    &.btn-pura-secondary {
+    &.chips-pura-secondary {
         border: 1px solid $primary;
         color: $primary;
 
@@ -42,7 +42,7 @@
             background: $primary;
             color: $white;
         }
-        &.btn-pura-accent {
+        &.chips-pura-accent {
             border-color: $accent;
             color: $accent;
 
@@ -54,9 +54,9 @@
         }
     }
     .icon-right {
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .icon-left {
-        margin-right: 10px;
+        margin-right: 5px;
     }
 }

@@ -14,7 +14,6 @@ export class ThemesService {
     constructor() { }
 
     public emitThemeActive(value: ThemeModel) {
-        console.log(value)
         this.themeActive.next(value);
         this.emitCategoriesList(value.categories);
         this.emitCategorySelected('');
@@ -25,7 +24,6 @@ export class ThemesService {
     }
 
     public emitCategorySelected(value: string) {
-        console.log(value)
         this.categorySelected.next(value);
     }
 }
