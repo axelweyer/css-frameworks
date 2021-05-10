@@ -4,7 +4,6 @@ import { PuraComponent } from './pura.component';
 import { PuraButtonsComponent } from './components/pura-buttons/pura-buttons.component';
 import { RouterModule } from '@angular/router';
 import { HighlightModule } from 'ngx-highlightjs';
-import { PuraLinksContent } from './components/pura-links/pura-links.content';
 import { PuraLinksComponent } from './components/pura-links/pura-links.component';
 
 export const themeRoutes = [

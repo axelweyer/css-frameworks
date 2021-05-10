@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { themesRoutes } from './themes/themes-routing.module';
-import { ThemesComponent } from './themes/themes.component';
 
 const routes: Routes = [
     {
@@ -18,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {anchorScrolling: 'enabled'})],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
