@@ -14,7 +14,7 @@
         background: $white-super-dark;
         @include transition();
     }
-    &:disabled {
+    &.disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }

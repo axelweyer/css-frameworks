@@ -1,4 +1,4 @@
 export const PuraCategories: any = [
     'TEXTS', 'LINKS', 'TITLES',
-    'COMPONENTS', 'BUTTONS', 'CHIPS'
+    'COMPONENTS', 'BUTTONS', 'CHIPS', 'TABLES'
 ]

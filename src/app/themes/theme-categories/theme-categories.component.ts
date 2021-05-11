@@ -21,7 +21,6 @@ export class ThemeCategoriesComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         const categoriesSub = this.themesService.categoriesList.subscribe((categoriesTheme: string[]) => {
-            console.log('categoriesTheme', categoriesTheme)
             this.categoriesTheme = categoriesTheme;
         });
         this.subscriptions.add(categoriesSub);

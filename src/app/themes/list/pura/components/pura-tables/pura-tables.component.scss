@@ -1,0 +1,27 @@
+@import './../../pura.component.scss';
+
+.table-pura {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        border-bottom: 2px solid $white-super-dark;
+
+        tr {
+            th {
+                padding: 10px 0;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $white-super-dark;
+            }
+
+            td {
+                padding: 10px 0;
+            }
+        }
+    }
+}
