@@ -1,0 +1,37 @@
+@import './../../pura.component.scss';
+
+.color {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 20px;
+    display: inline-flex;
+
+    &.primary {
+        background: $primary;
+    }
+    &.primary-dark {
+        background: $primary-dark;
+    }
+    &.accent {
+        background: $accent;
+    }
+    &.accent-dark {
+        background: $accent-dark;
+    }
+    &.text {
+        background: $text;
+    }
+    &.white {
+        background: $white;
+    }
+    &.white-dark {
+        background: $white-dark;
+    }
+    &.white-super-dark {
+        background: $white-super-dark;
+    }
+    &.grey {
+        background: $grey;
+    }
+}

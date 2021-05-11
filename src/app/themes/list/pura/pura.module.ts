@@ -8,6 +8,7 @@ import { PuraLinksComponent } from './components/pura-links/pura-links.component
 import { PuraTitlesComponent } from './components/pura-titles/pura-titles.component';
 import { PuraChipsComponent } from './components/pura-chips/pura-chips.component';
 import { PuraTablesComponent } from './components/pura-tables/pura-tables.component';
+import { PuraColorsComponent } from './components/pura-colors/pura-colors.component';
 
 export const themeRoutes = [
     {
@@ -24,7 +25,8 @@ export const themeRoutes = [
     PuraLinksComponent,
     PuraTitlesComponent,
     PuraChipsComponent,
-    PuraTablesComponent
+    PuraTablesComponent,
+    PuraColorsComponent
 ],
   imports: [
     CommonModule,
