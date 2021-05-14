@@ -2,6 +2,10 @@
 
 @import url("//fonts.googleapis.com/css?family=Poppins:300italic,400italic,500italic,600italic,700italic,300,400,500,600,700");
 
+* {
+    outline: 0 !important;
+}
+
 html {
     font-family: "Poppins", serif;
     background: white;

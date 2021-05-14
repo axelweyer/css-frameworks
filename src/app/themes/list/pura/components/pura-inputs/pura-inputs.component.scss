@@ -1,0 +1,95 @@
+@import "./../../pura.component.scss";
+
+.input-pura {
+    background: $white;
+    border: 1px solid $white-super-dark;
+    padding: 10px 15px;
+    border-radius: 1000px;
+    cursor: pointer;
+    @include transition();
+
+    &:hover, &:active, &:focus {
+        border-color: rgba($primary, 0.5);
+        @include transition();
+    }
+    &:disabled {
+        background: $white-dark;
+        border-color: $white-super-dark;
+        cursor: not-allowed;
+        color: $white-super-dark;
+    }
+    &[type="checkbox"],
+    &[type="radio"] {
+        margin-right: 10px;
+    }
+    &[type="range"] {
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: none;
+            @include transition();
+        }
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8.4px;
+            background: $white-dark;
+            border-radius: 1000px;
+        }
+        &:focus::-webkit-slider-runnable-track {
+            background: rgba($primary, 0.1);
+            @include transition();
+        }
+        &::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 1000px;
+            background: $white;
+            border: 1px solid $white-super-dark;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+        &::-moz-range-track {
+            width: 100%;
+            height: 8.4px;
+            background: $white-dark;
+            border-radius: 1.3px;
+        }
+        &::-moz-range-thumb {
+            height: 36px;
+            width: 16px;
+            border-radius: 3px;
+            background: $white;
+        }
+        &::-ms-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+        }
+        &::-ms-fill-lower {
+            background: #2a6495;
+            border-radius: 2.6px;
+        }
+        &::-ms-fill-upper {
+            background: $white-dark;
+            border-radius: 2.6px;
+        }
+        &::-ms-thumb {
+            height: 36px;
+            width: 16px;
+            border-radius: 3px;
+            background: $white;
+        }
+        &:focus {
+            &::-ms-fill-lower {
+                background: $white-dark;
+            }
+
+            &::-ms-fill-upper {
+                background: $white-super-dark;
+            }
+        }
+    }
+}
