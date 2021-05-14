@@ -1,0 +1,348 @@
+// COLORS
+$primary: #003d7f;
+$primary-dark: #000d4f;
+$accent: #ee6906;
+$accent-dark: #bb3603;
+$error: red;
+
+$text: #706f6f;
+$success: #009359;
+
+$white: white;
+$white-dark: #f8f8f8;
+$white-super-dark: #ddd;
+$grey: #888;
+
+// FONT-WEIGHT
+$font-light: 300;
+$font-normal: 500;
+$font-bold: 600;
+$font-super-bold: 700;
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin transition() {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.btn-pura {
+    padding: 15px 35px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    background: $white-dark;
+    @include font-size(18px);
+    font-weight: $font-light;
+    @include transition();
+
+    &:hover {
+        background: $white-super-dark;
+        @include transition();
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &.btn-pura-primary {
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            background: $primary-dark;
+        }
+        &.btn-pura-accent {
+            background: $accent;
+
+            &:hover {
+                background: $accent-dark;
+            }
+        }
+    }
+    &.btn-pura-secondary {
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover {
+            border-color: $primary-dark;
+            background: $primary;
+            color: $white;
+        }
+        &.btn-pura-accent {
+            border-color: $accent;
+            color: $accent;
+
+            &:hover {
+                border-color: $accent-dark;
+                background: $accent;
+                color: $white;
+            }
+        }
+    }
+    .icon-right {
+        margin-left: 10px;
+    }
+    .icon-left {
+        margin-right: 10px;
+    }
+}
+
+.chips-pura {
+    padding: 5px 15px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    background: $white-dark;
+    @include font-size(16px);
+    font-weight: $font-light;
+    @include transition();
+
+    &:hover {
+        background: $white-super-dark;
+        @include transition();
+    }
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &.chips-pura-primary {
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            background: $primary-dark;
+        }
+        &.chips-pura-accent {
+            background: $accent;
+
+            &:hover {
+                background: $accent-dark;
+            }
+        }
+    }
+    &.chips-pura-secondary {
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover {
+            border-color: $primary-dark;
+            background: $primary;
+            color: $white;
+        }
+        &.chips-pura-accent {
+            border-color: $accent;
+            color: $accent;
+
+            &:hover {
+                border-color: $accent-dark;
+                background: $accent;
+                color: $white;
+            }
+        }
+    }
+    .icon-right {
+        margin-left: 5px;
+    }
+    .icon-left {
+        margin-right: 5px;
+    }
+}
+
+.input-pura {
+    background: $white;
+    border: 1px solid $white-super-dark;
+    padding: 10px 15px;
+    border-radius: 1000px;
+    cursor: pointer;
+    @include transition();
+
+    &:hover, &:active, &:focus {
+        border-color: rgba($primary, 0.5);
+        @include transition();
+    }
+    &:disabled {
+        background: $white-dark;
+        border-color: $white-super-dark;
+        cursor: not-allowed;
+        color: $white-super-dark;
+    }
+    &[type="checkbox"],
+    &[type="radio"] {
+        margin-right: 10px;
+    }
+    &[type="range"] {
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: none;
+            @include transition();
+        }
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8.4px;
+            background: $white-dark;
+            border-radius: 1000px;
+        }
+        &:focus::-webkit-slider-runnable-track {
+            background: rgba($primary, 0.1);
+            @include transition();
+        }
+        &::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 1000px;
+            background: $white;
+            border: 1px solid $white-super-dark;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+        &::-moz-range-track {
+            width: 100%;
+            height: 8.4px;
+            background: $white-dark;
+            border-radius: 1.3px;
+        }
+        &::-moz-range-thumb {
+            height: 36px;
+            width: 16px;
+            border-radius: 3px;
+            background: $white;
+        }
+        &::-ms-track {
+            width: 100%;
+            height: 8.4px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+        }
+        &::-ms-fill-lower {
+            background: #2a6495;
+            border-radius: 2.6px;
+        }
+        &::-ms-fill-upper {
+            background: $white-dark;
+            border-radius: 2.6px;
+        }
+        &::-ms-thumb {
+            height: 36px;
+            width: 16px;
+            border-radius: 3px;
+            background: $white;
+        }
+        &:focus {
+            &::-ms-fill-lower {
+                background: $white-dark;
+            }
+
+            &::-ms-fill-upper {
+                background: $white-super-dark;
+            }
+        }
+    }
+}
+
+.a-pura {
+    cursor: pointer;
+    @include font-size(18px);
+    font-weight: $font-normal;
+    @include transition();
+    border-bottom: 2px solid $grey;
+    color: $grey;
+
+    &:hover {
+        color: $text;
+        border-color: $text;
+        @include transition();
+    }
+    &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &.a-pura-primary {
+        color: $primary;
+
+        &:hover {
+            color: $primary-dark;
+        }
+        &.a-pura-accent {
+            color: $accent;
+            border-color: $accent;
+
+            &:hover {
+                color: $accent-dark;
+                border-color: $accent-dark;
+            }
+        }
+    }
+}
+
+.table-pura {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        border-bottom: 2px solid $white-super-dark;
+
+        tr {
+            th {
+                padding: 10px 0;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $white-super-dark;
+            }
+
+            td {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+h1 {
+    @include font-size(27px);
+    color: $primary;
+    font-weight: $font-light;
+}
+h2 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-bold;
+}
+h3 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-normal;
+}
+h4 {
+    @include font-size(21px);
+    color: $primary;
+    font-weight: $font-light;
+}
+h5 {
+    @include font-size(18px);
+    font-weight: $font-bold;
+}
+h6 {
+    @include font-size(16px);
+    color: $primary;
+    font-weight: $font-bold;
+}

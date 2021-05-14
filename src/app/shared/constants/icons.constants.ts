@@ -1,6 +1,7 @@
-import { house, record } from 'ngx-bootstrap-icons';
+import { house, record, codeSquare } from 'ngx-bootstrap-icons';
 
 export const ICONS = {
     house,
-    record
+    record,
+    codeSquare
 };

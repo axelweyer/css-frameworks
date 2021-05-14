@@ -28,8 +28,8 @@ export const ThemesCategories = [
 
     new ThemeCategoryModel('FORMS', 'Forms', true, true),
     new ThemeCategoryModel('AUTOCOMPLETE', 'Autocomplete', true, false),
-    new ThemeCategoryModel('INPUTS', 'Inputs', true, false),
     new ThemeCategoryModel('CHECKBOXES', 'Checkboxes', true, false),
+    new ThemeCategoryModel('INPUTS', 'Inputs', true, false),
     new ThemeCategoryModel('RADIOS', 'Radios', true, false),
     new ThemeCategoryModel('SELECTS', 'Select', true, false),
     new ThemeCategoryModel('SLIDERS', 'Sliders', true, false),

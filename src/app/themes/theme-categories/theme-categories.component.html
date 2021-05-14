@@ -1,5 +1,5 @@
 <ul>
-    <li class="title"><h3>Install</h3></li>
+    <li class="title"><h3 (click)="selectCategory('INSTALL')">Install</h3></li>
     <li><hr></li>
     <li *ngFor="let category of categories" [ngClass]="{'disabled': !isCategoriesActivated(category.key, category.isCategory), 'title': category.isTitle}" (click)="selectCategory(category.key)">
         <h3 *ngIf="category.isCategory; else separator">{{ category.label }}</h3>

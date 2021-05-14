@@ -1,6 +1,6 @@
 export const PuraCategories: any = [
-    'GENERAL', 'COLORS',
+    'INSTALL', 'GENERAL', 'COLORS',
     'TEXTS', 'LINKS', 'TITLES',
     'COMPONENTS', 'BUTTONS', 'CHIPS', 'TABLES',
-    'FORMS', 'INPUTS'
+    'FORMS', 'CHECKBOXES', 'INPUTS', 'RADIOS'
 ]
